@@ -1,0 +1,29 @@
+/*.paragraph{
+    color:blue;
+    padding-top: 10px;
+    margin-top: -5px
+}
+
+.paragraph-container{
+    border-radius:10px;
+    background-color:aqua;
+    border:3px  dashed red;
+    width:500px;
+    height: 100px;
+
+}
+.container{
+    display:flex;
+    justify-content:center;
+}
+table,tr,th{
+    border-color:chartreuse;
+    color:blueviolet;
+}
+td,th{
+    color:black;
+}*/
+
+* {
+    color:brown;
+}

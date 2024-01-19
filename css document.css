@@ -1,0 +1,51 @@
+.box1{
+    height: 60px;
+    width:70px;
+    background-color: blue;
+    margin-bottom: 2px;
+    border-radius: 20px;
+    border: 3px solid red;
+    justify-content: center;
+    display: flex;
+    
+}
+.box2{
+    height: 60px;
+    width:70px;
+    background-color:aqua;
+    margin-bottom: 2px;
+    border-radius: 20px;
+    border: 3px solid blueviolet;
+    justify-content: center;
+    display: flex;
+    
+}
+.box3{
+    height: 60px;
+    width:70px;
+    background-color: rgb(11, 184, 77);
+    margin-bottom: 2px;
+    border-radius: 20px;
+    border: 3px solid brown;
+    justify-content: center;
+    display: flex;
+    
+}
+.box4{
+    height: 60px;
+    width: 70px;
+    background-color: navajowhite;
+    margin-bottom: 2px;
+    border-radius: 20px;
+    border: 3px solid rebeccapurple;
+    justify-content: center;
+    display: flex;
+    
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-self: flex-end;
+
+}
