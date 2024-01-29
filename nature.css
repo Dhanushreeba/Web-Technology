@@ -1,0 +1,97 @@
+h1 {
+    color: blue;
+    justify-content: left;
+   
+}
+
+h1 p{
+    text-align: left;   
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.hedding{
+    color: blue;
+    font-size: 30px;
+}
+
+.paragraph-width{
+    width: 250px;
+}
+
+.position{
+    margin-top: 90px;
+    margin-left: 150px;
+    width: 250px;
+}
+
+.paragraph{
+    font-size: 30px;
+}
+
+.paragraph-width{
+    margin-top: -500px;
+    width: 200px;
+    margin-left:100px ;
+}
+
+.login-container {
+    width: 400px;
+    max-width: 400px;
+}
+
+.login-box {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 8px;  
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: rgb(87, 79, 79);
+}  
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid whitesmoke;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    color: whitesmoke;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: blue;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(14, 69, 141);
+}
+
+a:hover {
+    text-decoration: underline;
+}

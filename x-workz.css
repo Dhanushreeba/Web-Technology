@@ -1,0 +1,32 @@
+body{
+    background-color:white;
+    text-align: center;
+
+}
+.button{
+    color: white;
+    background-color: orangered ;
+    width: 30px;
+    height: 30px;
+
+}
+.container{
+    margin-top: 80px;
+    margin-left: 90px;
+ }
+ .flex{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    box-shadow: black;  
+ }
+ card{
+    background-color: black;
+    width: 400px;
+    height: 200px;
+    box-shadow: black;
+    cursor: pointer;
+ }
+ .navbar{
+    
+ }

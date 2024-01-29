@@ -1,0 +1,36 @@
+.display{
+    /* display: inline; */
+    display:flex;
+    border: black solid 2px;
+    /* display:inline-flex; */
+    /* display:flex; */
+    /* display:inline-block; */
+
+}
+ol{
+    width: 100px;
+    background-color: blue;
+}
+span{
+    background-color: aquamarine;
+    text-decoration: none;
+
+}
+.decoration{
+    text-decoration: overline;
+    text-decoration-color: blueviolet;
+    text-decoration-style:wavy;
+    text-decoration-thickness: 5px;
+} 
+/* .decoration{
+    text-decoration: inline;
+    text-decoration-color: blueviolet;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 5px;
+}  */
+/* .decoration{
+    text-decoration: underline;
+    text-decoration-color: blueviolet;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 5px;
+}  */

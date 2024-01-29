@@ -1,0 +1,39 @@
+body{
+    background-color: aliceblue;
+    transform: translate(100px,100px);
+}
+.div{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    animation-name: animation;
+    animation-duration: 5s;
+    position: relative;
+    animation-iteration-count: 3;
+    /* animation-iteration-count: relative; */
+
+}
+@keyframes animation{
+    from{
+        background-color: aqua;
+    }
+    to{
+        background-color: brown;
+    }
+}
+.div1{
+    margin-top: 150px;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    animation-name: animation;
+    animation-duration: 6s;
+}
+@keyframes animation{
+    
+       0% {background-color: aqua; top: 0px; left: 0px;}
+       25% {background-color: brown; top: 0px; left: 100px;}
+       50% {background-color: green; top: 100px; left: 0px;}
+       75% {background-color: greenyellow; top: 100px; left: 0px;}
+       100% {background-color: blueviolet; top: 100px; left: 0px;}
+}
