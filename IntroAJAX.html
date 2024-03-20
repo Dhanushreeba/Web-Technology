@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function getData(){
+        request=new XMLHttpRequest()
+        // converting String to object using JSON.parse()
+        request.onload=function(){
+            console.log(this.responseText)
+            console.log(typeof(this.responseText))
+            console.log(this.responseText.count)
+            var responseData=JSON.parse(this.responseText)
+            console.log(responseData.count)
+            var entries=responseData.entries
+            let table="<table><tr><th>API</th><th>Description</th><th>Category</th>"
+            for(let i=0;i<entries.length;i++){
+                console.log("Description -" +entries[i].Description)
+                console.log("API" +entries[i].API)
+                //apiResponse.innerHTML=entries[i].Description
+                table=table+"<tr><td>" +entries[i].API+ "</td><td>" +entries[i].Description+ "</td><td>" +entries[i].Category+ "</td><tr>"
+            }
+            var apiResponse=document.getElementById("apiResponse")
+            apiResponse.innerHTML=table
+        }
+        request.open("GET","https://api.publicapis.org/entries")
+        request.send()
+        console.log("API is called from AJAX")
+    }
+</script>
+<body>
+    <h1>API</h1>
+    <h2>To make API call we use AJAX in javascript </h2>
+    <h3>AJAX-Asynchronous javascript and XML</h3>
+    <button onclick="getData()">Get me the Data</button>
+    <span id="apiResponse"></span>
+    
+</body>
+</html>

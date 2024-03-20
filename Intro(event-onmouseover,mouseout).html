@@ -1,0 +1,41 @@
+<!DOCTYPE html>>
+<head>
+    <title>Event-OnmouseOver,mouseOut</title>
+    <Script>
+        function mouseOver(){
+            console.log("Calling mouse over function")
+            var mouseOver=document.getElementById("mouseOver")
+            mouseOver.style.color='red'
+            mouseOver.innerHTML='Thank You'
+        }
+        function mouseOut(){
+            var mouseOut=document.getElementById("mouseOver")
+            mouseOut.style.color='black'
+            mouseOut.innerHTML='OnMouseOver'
+        }
+        function changeValue(){
+            console.log("calling Blur function")
+            var name=document.getElementById("name")
+           // name.value=name.style.transform.toUpperCase
+            console.log(name.value.toUpperCase())
+            name.value=name.value.toUpperCase()
+        }
+        function loadMessage(){
+            alert("displaying message using alert")
+        }
+    </Script>
+    </head>
+    <body onload="loadMessage()">
+
+        <button id="mouseOver" onmouseover="mouseOver()"
+        onmouseOut="mouseOut()">OnMouseOver</button>
+
+        <form>
+            <input id="name" onblur="changeValue()">
+        </form>
+
+    </body>
+</html>
+
+<!-- <button onclick="displayDate()">Get Date</button>
+<span id="dateMessage"></span> -->

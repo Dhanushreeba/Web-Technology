@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+
+    <Script>
+
+        function validateRegistration(){
+            //firstname
+            var firstName=document.getElementById("firstName")
+            console.log(firstName)
+            console.log(firstName.value)
+            if(firstName.value==''){
+                console.log("Please Enter FirstName")
+                var errorFirstName=document.getElementById("errorFirstName")
+                errorFirstName.innerHTML='Please Enter FirstName'
+                errorFirstName.style.color='red'
+            }
+            var lastName=document.getElementById("lastName")
+            console.log(lastName)
+            console.log(lastName.value)
+            if(lastName.value==''){
+                console.log("Please Enter LastName")
+                var errorLastName=document.getElementById("errorLastName")
+                errorLastName.innerHTML='please Enter LastName'
+                errorLastName.style.color='red'
+            }
+            //document.formname.controlname/feildname
+
+            console.log(document.registration.gender)
+            console.log(document.registration.gender[0])
+            console.log(document.registration.gender[1])
+            console.log(document.registration.gender[2])
+
+            console.log(document.registration.gender[0].checked)
+            console.log(document.registration.gender[1].checked)
+            console.log(document.registration.gender[2].checked)
+            
+            if(document.registration.gender[0].checked == false &&
+            document.registration.gender[1].checked == false && 
+            document.registration.gender[2].checked == false)
+            {
+                console.log("Please Select Gender")
+            }
+            // console.log(document.registration.city)
+
+            // if(document.registration.city.value =='0'){
+            //     console.log("Please Enter City")
+            // }
+
+            console.log(firstName.value)
+            console.log(lastName.value)
+            var genderData
+            if(document.registration.gender[0].checked == true){
+                genderData=document.registration.gender[0].value
+            }else if(document.registration.gender[1].checked == true){
+                genderData=document.registration.gender[1].value
+            }else if(document.registration.gender[2].checked == true){
+                genderData=document.registration.gender[2].value
+            }
+            console.log(genderData)
+            // console.log(document.registration.city.value)
+
+            //Storage
+            //We can store upto 5MB of data in the browser using storage
+            //2 types,(local Storage,session Storage)
+
+             localStorage.setItem("Validation","false")
+             console.log(localStorage.getItem("validation"))
+
+            var registerData = {
+                'firstName':firstName.value,
+                'lastName':lastName.value,
+                'gender':genderData,
+                // 'city':document.registration.city.value
+            } 
+            console.log(registerData)
+
+             localStorage.setItem("registration",JSON.stringify(registerData))
+
+            var registrationdata=localStorage.getItem("registration")
+            console.log(registrationdata)
+            var registrationObject = JSON.parse(registrationdata)
+            console.log(registrationObject)
+            console.log(registrationObject.firstName)
+
+            //localStorage.removeItem("Validation")
+            //localStorage.clear()
+        }
+    </Script>
+</head>
+<body>
+    <form name="registration">
+    
+    First Name<input type="text" id="fisrtName" ><br>
+    Last Name<input type="text" id="lastName" ><br>
+            
+        Gender  <span>Male<input type="radio"  name="gender" value="Male"></span>
+                <span>Female<input type="radio"  name="gender" value="Female"></span>
+                <span>Others<input type="radio"  name="gender" value="Others"></span><br>
+            
+                <button type="button" onclick="validateRegistration()">Submit</button>
+        </form>
+</body>
+</html>

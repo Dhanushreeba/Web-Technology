@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xworkz</title>
+    <script src="fork.js"></script>
+</head>
+<body>
+    <div style="margin: 30px;border: 3px solid rgb(34, 226, 16);padding: 30px; height: 400px;width: 700px">
+    <div>
+         <form name="registration">
+             <!-- <span  Style="color:brown"; id="fName error" ;></span> -->
+            <div>
+            <label>First Name</label>
+            <input type="text" id="fName" onblur="fnameValidation()" placeholder="Enter first name"required>
+            <label>Last Name</label>
+            <input type="text" id="lName" onblur="lnameValidation()" placeholder="last Name"required>
+        </div><br/>
+
+        <div>
+            <label>Gender</label>
+            <div>
+                <label>Working</label>
+                <span>yes<input type="radio" name="Working" value="yes"></span>
+                <span>no<input type="radio" name="Working" value="no"></span>
+                
+            </div>
+        </div><br/>
+
+            <div>
+            <label>Date Of Birth</label>
+            <input type="Date" id="dob" onblur="dobValidation()" placeholder="Date"required>
+        </div><br/>
+
+        <div>
+            <label>Address</label>
+            <input type="text" id="address" onblur="addressValidation()" placeholder="address"required>
+        </div><br/>
+
+        <div>
+            <label>Phone Number</label>
+            <input type="text" placeholder="+91"required>
+            <input type="text" id="phoneNumber" onblur="phoneNumberValidation()" placeholder="7642980126"required>
+        </div><br/>
+
+        <div>
+            <label>Password</label>
+            <input type="text" id="password" onblur="passwordValidation()" placeholder="Password"required>
+        </div><br/>
+
+        <div>
+            <input type="button" id="button" onclick="functionClick()" value="Submit"/>
+            <label>&nbsp &nbsp &nbsp &nbsp &nbsp</label>
+            <input type="Reset" placeholder="Clear"/>
+        </div><br/>
+        </form> 
+    </div>
+</div>
+</body>
+</html>

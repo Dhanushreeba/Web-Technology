@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <a href="regForm.html">Login</a>
+    <script src="registration.js"> </script>
+</head>
+<body bgcolor="yellow">
+    <div>
+    <h2>Registration Page</h2>
+    <form  name="register">
+        <div>
+        <span style=color:red id="fnameError"></span>
+        <label>Firstname:</label>
+        <input type="text" id="fname" onblur="fnameFunction()" name="firstname" ><br><br>
+    </div>
+
+    <div>
+        <span style=color:red id="lnameError"></span>
+        <label>Lastname:</label>
+        <input type="text" id="lname" onblur="lnameFunction()" name="lastname" ><br><br>
+    </div>
+
+    <div>
+        <span style=color:red id="passwordError"></span>
+        <label>Password:</label>
+        <input type="password" id="password" onblur="passwordFunction()" name="password" ><br><br>
+    </div>
+
+    <div>
+        <span style=color:red id="emailError"></span>
+        <label>Email:</label>
+        <input type="email" id="email" onblur="emailFunction()" name="email" ><br><br>
+    </div>
+
+    <div>
+        <label>Gender:</label>
+         Yes<input type="radio" name="gender" value="yes">No<input type="radio" name="gender" value="no"><br><br>
+    </div>
+
+        <div>
+        <button type="button" id="button" value="Register" onclick="registerUser()">Register</button>
+        <input type="reset" value="Clear" onclick="clear()">
+    </div>
+    </form>
+</div>
+</body>
+</html>

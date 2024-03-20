@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document-Task</title>
+</head>
+<script>
+    function getData(){
+            request=new XMLHttpRequest()
+            request.onload=function(){
+            console.log(this.responseText)
+            console.log(typeof(this.responseText))
+            
+            var responseData=JSON.parse(this.responseText)
+          
+            var time=responseData.time
+            let table="<table><tr><th>updated</th><th>disclaimer</th><th>chartName</th>"
+            for(let i=0;i<time.length;i++){
+                console.log(" updatedISO-" +time[i].disclaimer)
+                console.log("updated-" +time[i].updated)
+                table=table+"<tr><td>" +time[i].updated+ "</td><td>" +time[i].disclaimer+ "</td><td>" +time[i].chartName+ "</td><tr>"
+            }
+            var apiResponse=document.getElementById("apiResponse")
+            apiResponse.innerHTML=table
+        }
+        request.open("GET","https://api.coindesk.com/v1/bpi/currentprice.json")
+        request.send()
+        console.log("API is called from AJAX")
+    }
+</script>
+<body>
+    <h1>API</h1>
+    <h2>To make API call we use AJAX in javascript </h2>
+    <h3>AJAX-Asynchronous javascript and XML</h3>
+    <button onclick="getData()">Get me the Data</button>
+    <span id="apiResponse"></span>
+    
+</body>
+</html>

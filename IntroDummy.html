@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Validation</title>
+  <script>
+   function formRegistration()
+   {
+    var FirstName=document.getElementById("firstName")
+    console.log(FirstName)
+    console.log(FirstName.value)
+
+   if(FirstName.value==''){
+   console.log("please Enter FirstName")
+   
+   var errorFirstName = document.getElementById("errorFirstName")
+   errorFirstName.innerHTML="please Enter FirstName"
+   errorFirstName.style.color='red'
+   }
+
+   var LastName=document.getElementById("lastName")
+    console.log(LastName)
+    console.log(LastName.value)
+
+   if(LastName.value==''){
+   console.log("please Enter FirstName")
+   
+   var errorLastName = document.getElementById("errorLastName")
+   errorLastName.innerHTML="please Enter LastName"
+   errorLastName.style.color='red'
+   }
+
+   var PassWord=document.getElementById("passWord")
+    console.log(PassWord)
+    console.log(PassWord.value)
+
+   if(PassWord.value==''){
+   console.log("please Enter PassWord")
+   
+   var errorPassWord = document.getElementById("errorPassWord")
+   errorPassWord.innerHTML="please Enter PassWord"
+   errorPassWord.style.color='red'
+
+   }
+
+   var Email=document.getElementById("email")
+    console.log(Email)
+    console.log(Email.value)
+
+   if(Email.value==''){
+   console.log("please Enter Email")
+   
+   var errorEmail = document.getElementById("errorEmail")
+   errorEmail.innerHTML="please Enter Email"
+   errorEmail.style.color='red'
+   }
+
+    var Address=document.getElementById("address")
+    console.log(Address)
+    console.log(Address.value)
+
+   if(Address.value==''){
+   console.log("please Enter Address")
+   
+   var errorAddress = document.getElementById("errorAddress")
+   errorAddress.innerHTML="please Enter Address"
+   errorAddress.style.color='red'
+   }
+
+   var PhoneNo=document.getElementById("phoneNo")
+    console.log(PhoneNo)
+    console.log(PhoneNo.value)
+
+   if(PhoneNo.value==''){
+   console.log("please Enter PhoneNo")
+   
+   var errorPhoneNo = document.getElementById("errorPhoneNo")
+   errorPhoneNo.innerHTML="please Enter PhoneNo"
+   errorPhoneNo.style.color='red'
+   }
+
+   //document.formname.controlname/fieldname
+
+   console.log(document.registration.gender)
+   console.log(document.registration.gender[0])
+   console.log(document.registration.gender[1])
+   console.log(document.registration.gender[2])
+
+   console.log(document.registration.gender[0].checked)
+   console.log(document.registration.gender[1].checked)
+   console.log(document.registration.gender[2].checked)
+
+
+   if(document.registration.gender[0].checked==false && 
+   document.registration.gender[1].checked==false &&
+    document.registration.gender[2].checked==false)
+    {
+      console.log("please select Gender")
+     var errorGender=document.getElementById("errorGender")
+     errorGender.innerHTML="please select Gender"
+     errorGender.style.color='red'
+    }
+
+    console.log(document.registration.country.value)
+
+     if(document.registration.country.value=='select city')
+     {
+      console.log("please Select Country")
+      var errorCountry = document.getElementById("errorCountry")
+      errorCountry.innerHTML="please Select Country"
+      errorCountry.style.color='red'
+   
+     }
+
+
+    console.log(FirstName.value)
+    console.log(LastName.value)
+    console.log(PassWord.value)
+    console.log(Email.value)
+    console.log(Address.value)
+    console.log(PhoneNo.value)
+     var genderData
+    if(document.registration.gender[0].checked==true){
+      genderData= document.registration.gender[0].value
+    }
+    else if(document.registration.gender[1].checked==true){
+      genderData= document.registration.gender[1].value
+    }
+    else if(document.registration.gender[2].checked==true){
+      genderData= document.registration.gender[2].value
+    }
+    console.log(genderData)
+    var country=document.registration.country.value
+    console.log(country)
+
+    //storage
+
+    localStorage.setItem("validation", "correct")
+    console.log(localStorage.getItem("validation"))
+
+    var registerData = {
+      'firstName':FirstName.value,
+      'lastName':LastName.value,
+      'passWord':PassWord.value,
+      'email':Email.value,
+      'address':Address.value,
+      'phoneNo':PhoneNo.value,
+      'gender':genderData,
+      'country':document.registration.country.value
+    }
+    console.log(registerData)
+
+    localStorage.setItem("registration1",JSON.stringify(registerData))//convert object to string
+
+    var registerationData = localStorage.getItem("registration1")
+    console.log(registerationData)
+
+    var registerObject=JSON.parse(registerationData)
+    console.log(registerObject)
+    console.log(registerObject.firstName)
+    console.log(registerObject.lastName)
+    console.log(registerObject.passWord)
+    console.log(registerObject.email)
+    console.log(registerObject.address)
+    console.log(registerObject.phoneNo)
+    console.log(registerObject.gender )
+    console.log(registerObject.country)
+
+
+  }
+  //localStorage.removeItem("registration")  //remove key in localStroage
+  //localStorage.clear() //remove all data in local stroage
+
+    
+
+  
+
+    
+  </script>
+</head>
+<body >
+  <style>
+    .text-container
+    {
+      background-color: #c0ad40; 
+      border: none;
+   
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .fromDesign
+    {
+      width: 400px; /* Adjust width */
+      height: 800px; /* Adjust height */
+      padding: 20px; /* Add padding for spacing inside the form */
+      border: 1px solid #ccc; /* Add border for visual distinction */
+      border-radius: 5px; /* Add rounded corners */
+    }
+    .button-container
+    {
+      background-color: #4c4faf; /* Green */
+      border: none;
+      color: rgb(206, 32, 32);
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+    
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 4px;
+      width: 100px; 
+      height: 40px;
+
+    
+
+  }
+  </style>
+  <h1>Form validation</h1>
+  <form name="registration" style="background-color: aqua" class="fromDesign">
+    <!-- <label>FirstName</label> -->
+    <span id="errorFirstName"></span><br>
+   <b>FirstName</b> &nbsp;<input type="text" class="text-container" id="firstName"  placeholder="Enter FirstName"/><br><br>
+    <span id="errorLastName"></span><br>
+   <b>LastName</b> &nbsp;<input type="text" class="text-container" id="lastName"  placeholder="Enter LastName"/><br><br>
+   <span id="errorPassWord"></span><br>
+   <b>PassWord</b>&nbsp;<input type="text" class="text-container" id="passWord"  placeholder="Enter PassWord"/><br><br>
+   <span id="errorEmail"></span><br>
+   <b>Email</b>&nbsp; &nbsp; &nbsp; &nbsp;<input type="text" class="text-container" id="email"  placeholder="Enter Email"/><br><br>
+   <span id="errorAddress"></span><br>
+   <b>Address</b>&nbsp; &nbsp;<input type="text" class="text-container" id="address"  placeholder="Enter Address"/><br><br>
+   <span id="errorPhoneNo"></span><br>
+   <b>Phone Number</b>&nbsp;<input type="text" class="text-container" id="phoneNo"  placeholder="Enter phoneNumber"/><br><br>
+   <span id="errorGender"></span><br>
+   <b>Gender</b>&nbsp;<input type="radio" class="text-container" value="male" name="gender">Male
+   <input type="radio"  value="female" name="gender">Female
+   <input type="radio"  value="other" name="gender">Other<br><br>
+   <span id="errorCountry"></span><br>
+  <b>Country</b>&nbsp;<select id="country" class="text-container">
+    <option value="select city">--Select Country--</option> 
+    <option value="India">India</option>
+    <option value="Austria">Austria</option>
+    <option value="Canada">Canada</option>
+    <option value="Bangladesh">Bangladesh</option>
+    <option value="Bezile">Bezile</option>
+    </select><br><br>
+    <div class="button-container">
+   <button type="button" onclick="formRegistration()"><b>Register</b></button>
+  </div>
+  </form>
+  </body>
+</html>

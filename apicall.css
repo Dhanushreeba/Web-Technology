@@ -1,0 +1,38 @@
+/* .container{
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+}
+.container-container{
+    padding: 20px;
+    
+
+}
+.container {
+    width: 300px; 
+    height: fit-content;
+}
+.container-container {
+    width: fit-content; 
+    height: fit-content;
+    padding: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    background-color: #f9f9f9; 
+  } */
+
+  .container {
+    position: relative;
+    font-family: Arial;
+  }
+  
+  .text-block {
+    position: absolute-center;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xworkz</title>
+    <script src="asynchronus.js"></script>
+</head>
+<body>
+
+<!-- wethear checking of asynchronus -->
+    <div>
+        <span id="temp"></span>
+    </div>
+
+
+
+    <div class="container">   
+        <span style="color: chocolate;">Registration Form</span>
+    </div><br/>
+    <div class="flex">
+    <div class="card">
+    <form name="register" >
+        <span style=color:red id="firstNameError"></span>
+        <div>
+            <label>First Name</label>
+            <input type="text" id="fname" onblur="fnameFuncation()" placeholder="enter first name">
+        </div><br/>
+        <span style=color:red id="lastNameError"></span>
+        <div>
+            <label>Last Name</label>
+            <input type="text" id="lname" onblur="lnameFuncation()" placeholder="enter last name">
+        </div><br/>
+        <div>
+            <label>Enter email address</label>
+            <input type="text"  id="email" onblur="emailFunction()" placeholder="email address or mobile number"/>
+        </div><br/>
+        <span style=color:red id="passwordError"></span>
+        <div>
+            <label>Password</label>
+            <input type="text" id="password" onblur="passwordFuncation()" placeholder="enter password">
+        </div><br/>
+
+        <div>
+            <label>working</label>
+             Yes<input type="radio" name="working" value="yes">
+             No<input type="radio" name="working" value="no"> 
+        </div><br/>
+    
+        <div>
+            <input type="button" id="button" value="Submit"  onclick="functionClick()">
+        </div><br/>
+
+        <div>
+            <button class="button">Login</button>
+        </div><br/>
+
+        <div>
+            <button class="forgotten">forget password?</button>
+        </div><br/>
+
+    </form>
+</body>
+</html>

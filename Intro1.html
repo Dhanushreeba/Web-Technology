@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Intro1</title>
+        <script>
+            function substraction(){
+
+                var a=document.getElementById('a').value
+                var b=document.getElementById('b').value
+                sub=Number(a)-Number(b)
+                console.log(sub)
+            }
+
+            function multiplication(){
+
+                var c=document.getElementById('c').value
+                var d=document.getElementById('d').value
+                mul=Number(c)*Number(d)
+                console.log(mul)
+            }
+
+            function division(){
+
+                var e=document.getElementById('e').value
+                var f=document.getElementById('f').value
+                div=Number(e)/Number(f)
+                console.log(div)
+            }
+
+            function modulus(){
+
+                var g=document.getElementById('g').value
+                var h=document.getElementById('h').value
+                mod=Number(g)%Number(h)
+                console.log(mod)
+            }
+
+        </script>
+        <body>
+            <h1>substraction</h1>
+            First Element<input type="text" id="a"><br>
+            Second Element<input type="text" id="b">
+            <button type="button" onclick="substraction()">submit</button>
+
+            <h1>multiplication.......</h1>
+            First Element<input type="text" id="c"><br>
+            Second Element<input type="text" id="d">
+            <button type="button" onclick="multiplication()">submit</button>
+
+            <h1>division.........</h1>
+            First Element<input type="text" id="e"><br>
+            Second Element<input type="text" id="f">
+            <button type="button" onclick="division()">submit</button>
+
+            <h1>Modulus...........</h1>
+            First Element<input type="text" id="g"><br>
+            Second Element<input type="text" id="h">
+            <button type="button" onclick="modulus()">click</button>
+        </body>
+    </body>
+</html>
